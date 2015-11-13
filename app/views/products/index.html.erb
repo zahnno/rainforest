@@ -1,1 +1,8 @@
 <a href="/products/new">New</a>
+<% @products.each do |a| %>
+<p>Name: <%= a.name %> <br>
+Description: <%= a.description %> <br>
+Price: <%= a.formatted_price %>$
+</p>
+<%= link_to "Show", product_path(a) %>
+<%end%>
