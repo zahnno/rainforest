@@ -1,3 +1,7 @@
+<p>Name: <%= @product.name %><br>
+Description: <%= @product.description %><br>
+Price: <%= @product.formatted_price %></p>
+
 <h3>Reviews</h3>
 
   <p>Reviews for <%= @product.name %></p>
@@ -10,6 +14,7 @@
         <em> by <%= review.user.name %></em>
         Added on: <%= review.created_at %>
       <% end %>
+      <%= link_to "Delete Review", product_review_path(@product, review), method: :delete %>
     </p>
   <% end %>
 
@@ -41,3 +46,6 @@
 <% else %>
   <p>Please <%= link_to "log in", new_session_path %> to add a review.</p> 
 <% end %>
+<p><%= link_to "Delete Product", @photo, method: :delete, data:
+{confirm: "Are you sure you want to delete?"} %>
+</p>

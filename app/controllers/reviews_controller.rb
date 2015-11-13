@@ -21,7 +21,7 @@ class ReviewsController < ApplicationController
 
 
     if @review.save
-    	redirect_to products_path, notice: 'Review created successfully'
+    	redirect_to product_path(@product), notice: 'Review created successfully!'
     else
     	render 'products/show'
     end
@@ -30,6 +30,7 @@ class ReviewsController < ApplicationController
   def destroy
   	@review = Review.find(params[:id])
     @review.destroy
+    redirect_to product_path(@review.product)
   end
 
   private 
