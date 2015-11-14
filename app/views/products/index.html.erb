@@ -1,8 +1,10 @@
-<a href="/products/new">New</a>
+<p class = "new">
+<a href="/products/new">Create New Product</a></p>
 <% @products.each do |a| %>
-<p>Name: <%= a.name %> <br>
+<p class = "list">Name: <%= a.name %> <br>
 Description: <%= a.description %> <br>
 Price: <%= a.formatted_price %>$
 </p>
-<%= link_to "Show", product_path(a) %>
+<p class = "link">
+<%= link_to "Show", product_path(a) %></p>
 <%end%>

@@ -1,15 +1,51 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+h1 {	
+	color: pink; 
+	font-family: "Great Vibes", cursive; 
+	font-size: 165px; 
+	line-height: 160px; 
+	font-weight: normal; 
+	margin-bottom: 0px; 
+	margin-top: 10px; 
+	text-align: center; 
+	text-shadow: 3px 4px black, 6px 6px purple;
+    background-color: purple;
+}
+
+body {
+	background-image: url(http://7-themes.com/data_images/out/66/6999222-purple-flowers-background.jpg);
+}
+
+.new a {
+	font-size: 35px;
+	color: pink;
+	text-decoration: none;
+}
+
+.new a:hover {
+	color: white;
+}
+
+.list {
+	font-size: 40px;
+	color: white;
+}
+
+.link a{
+	font-size: 30px;
+	text-decoration: none;
+	color: pink;
+}
+
+.link a:hover {
+	color: white;
+}
+
+.userinfo {
+	text-decoration: none;
+	font-size: 20px;
+	margin: 0;
+}
+
+
+
+
