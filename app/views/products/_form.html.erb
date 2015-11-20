@@ -22,10 +22,14 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :price_in_cents %><br />
-    <%= f.number_field :price_in_cents %>
+    <%= f.label "Price" %><br />
+    <%= f.text_field :price_in_dollars %>
   </div>
   <div class="actions">
     <%= f.submit %>
+  </div>
+  <div class="field">
+  <%= f.label :image %><br />
+  <%= f.text_field :image %>
   </div>
 <% end %>

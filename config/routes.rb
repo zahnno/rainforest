@@ -3,5 +3,7 @@ Rails.application.routes.draw do
  resources :products do
   resources :reviews, only: [:show, :create, :destroy]
 end
- resources :users, only: [:new, :create]
+ resources :users, only: [:new, :create, :show] do
+ 	resources :reviews, only: [:show, :create, :destroy]
+ end
 end

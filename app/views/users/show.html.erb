@@ -1,0 +1,9 @@
+<h1><%= current_user.name %></h1>
+<div class = "showpage"> <h3>Reviews</h3>
+
+<% current_user.reviews.each do |review|%>
+<div class = "showpage" style = "margin-bottom: 5px;">
+Product: <%= review.product.name %> <br>Comment: <%= review.comment %>  <%= review.created_at  %><br>
+</div>
+<% end %> </div>
+<p> <%= link_to "Back to Products", products_path %> </p> 
