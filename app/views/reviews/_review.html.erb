@@ -1,0 +1,22 @@
+
+
+<% if @review.errors.any? %>
+  ('body').prepend('<h2 class = "error"> Something went wrong</h2>')
+<% else %>
+<!-- $('.new_review').append('<$= j render @review %>');
+$('#review_comment').val(''); -->
+    <p>
+      <%= review.comment %>
+      <br>
+      <% if review.user != nil %>
+        <em> by <%= review.user.name %></em>
+        Added on: <%= review.created_at %>
+        <% end %>
+        <% if review.user == current_user %>
+      <%= link_to "Delete Review", product_review_path(@product, review), method: :delete %>
+      <% end %>
+    </p>
+  
+
+
+<% end %>

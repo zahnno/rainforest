@@ -1,0 +1,6 @@
+<% if @review.errors.any? %>
+	$('body').prepend('<h2 class= "error">Something went wrong!<h2>');
+<% else %>
+	$('.reviews-list').append('<%= j render @review %>');
+	$('#review_comment').val('');
+<% end %>

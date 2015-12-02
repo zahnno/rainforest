@@ -18,14 +18,28 @@ class ReviewsController < ApplicationController
       product_id: @product.id,
       user_id: current_user.id
      )    
+    respond_to do |format| 
+        
+        if @review.save
+          format.html do
+              if request.xhr?
+                render @review
+              else
+            	redirect_to product_path(@product), notice: 'Review created successfully!'
+              end
+          end
 
 
-    if @review.save
-    	redirect_to product_path(@product), notice: 'Review created successfully!'
-    else
-    	render 'products/show'
+          format.js
+        else
+          format.html do
+        	   render 'products/show'
+          end
+          format.js
+      end
     end
   end
+
 
   def destroy
   	@review = Review.find(params[:id])
